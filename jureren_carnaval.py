@@ -280,15 +280,15 @@ else:
     elif st.session_state.soort_jury == 'Groepen':
         # kolom/tabblad 4: categorie GROEPEN A    
         with tabs[1]:
-            beoordeling_categorie_jurylid('Groepen A')   
+            beoordeling_categorie_jurylid('Groepen A', jurylid)   
             
         # kolom/tabblad 5: categorie GROEPEN B
         with tabs[2]:
-            beoordeling_categorie_jurylid("Groepen B")
+            beoordeling_categorie_jurylid("Groepen B", jurylid)
             
         # kolom/tabblad 6: categorie GROEPEN C    
         with tabs[3]:
-            beoordeling_categorie_jurylid("Groepen C")
+            beoordeling_categorie_jurylid("Groepen C", jurylid)
             
         with tabs[4]:
             st.header("Uitslag")
@@ -323,6 +323,7 @@ else:
         
 
         
+
 
 
 
