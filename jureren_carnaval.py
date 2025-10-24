@@ -244,8 +244,8 @@ else:
                     st.success(f"Ingelogd als {jurylid_nummer} voor {soort_jury}.")
                     st.experimental_rerun()
                     
-        img = Image.open(r"C:\Users\Gebruiker\OneDrive\Privé\Programmeren\Carnaval Sas Van Gent\betekoppen_logo.png") 
-        st.image(img, use_container_width=True)
+       # img = Image.open(r"C:\Users\Gebruiker\OneDrive\Privé\Programmeren\Carnaval Sas Van Gent\betekoppen_logo.png") 
+        #st.image(img, use_container_width=True)
       
     
     if st.session_state.soort_jury == 'Wagens':
@@ -323,6 +323,7 @@ else:
         
 
         
+
 
 
 
