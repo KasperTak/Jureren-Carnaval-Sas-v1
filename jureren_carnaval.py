@@ -25,7 +25,8 @@ if "username" not in st.session_state:
 #%% GOOGLES SHEETS SETUP
 
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("credentials_juryapp.json", scope)
+creds_dict = st.secrets["google"]
+creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
 client = gspread.authorize(creds)
 
 # Open de Google Sheet
@@ -321,4 +322,5 @@ else:
         
         
         
+
         
