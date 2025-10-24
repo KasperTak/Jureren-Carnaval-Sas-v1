@@ -229,11 +229,11 @@ else:
         
         if soort_jury == 'Wagens':
             jurylid_nummer = st.selectbox("Met welk jurylid hebben we te maken?",
-                                      ("W1", "W2", "W3", "W4", "W5", "W6", "W7", "W8", "W9"), index=None) #, disabled= st.session_state.disabled_choices)
+                                      ("W1", "W2", "W3", "W4", "W5", "W6", "W7", "W8", "W9"), index=0) #, disabled= st.session_state.disabled_choices)
             
         elif soort_jury == 'Groepen':
             jurylid_nummer = st.selectbox("Met welk jurylid hebben we te maken?",
-                                      ("G1", "G2", "G3", "G4", "G5", "G6", "G7", "G8", "G9"), index=None) #, disabled= st.session_state.disabled_choices)
+                                      ("G1", "G2", "G3", "G4", "G5", "G6", "G7", "G8", "G9"), index=0) #, disabled= st.session_state.disabled_choices)
     
         if jurylid_nummer:
                 st.write(f"Welkom {jurylid_nummer} voor categorie {soort_jury}!")
@@ -323,6 +323,7 @@ else:
         
 
         
+
 
 
 
