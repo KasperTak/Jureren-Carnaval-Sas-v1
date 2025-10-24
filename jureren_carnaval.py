@@ -225,7 +225,7 @@ else:
                               key = 'radio_soort_jury', 
                               # disabled= st.session_state.disabled_choices, 
                               horizontal=True,
-                              index=None)
+                              index=0)
         
         if soort_jury == 'Wagens':
             jurylid_nummer = st.selectbox("Met welk jurylid hebben we te maken?",
@@ -323,5 +323,6 @@ else:
         
 
         
+
 
 
