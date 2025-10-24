@@ -250,6 +250,7 @@ else:
     
     if st.session_state.soort_jury == 'Wagens':
         with tabs[1]:
+            st.write(df_existing.columns.tolist())
             beoordeling_categorie_jurylid("Wagens A", jurylid)
     #------------------------------------------------------------------------------------------------------------------------------------------------
         # kolom/tabblad 2: categorie WAGENS A
@@ -323,6 +324,7 @@ else:
         
 
         
+
 
 
 
