@@ -89,7 +89,7 @@ def beoordeling_categorie_jurylid(categorie, jurylid):
         records = sheet.get_all_records()
         return pd.DataFrame(records)
     df_existing = load_existing_data()
-    
+    st.write(df_existing.columns.tolist())
     # Filter programma op categorie
     df_tab = programma_df[programma_df['categorie'].str.contains(categorie, case=False, na=False)]
 
@@ -250,7 +250,6 @@ else:
     
     if st.session_state.soort_jury == 'Wagens':
         with tabs[1]:
-            st.write(df_existing.columns.tolist())
             beoordeling_categorie_jurylid("Wagens A", jurylid)
     #------------------------------------------------------------------------------------------------------------------------------------------------
         # kolom/tabblad 2: categorie WAGENS A
@@ -324,6 +323,7 @@ else:
         
 
         
+
 
 
 
