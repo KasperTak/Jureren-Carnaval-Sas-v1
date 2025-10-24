@@ -14,7 +14,7 @@ import glob
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from datetime import datetime
-
+st.set_page_config(page_title="Jureren Betekoppen")
 #%%
 # INITIALISATIE VAN STATE
 if "logged_in" not in st.session_state:
@@ -182,7 +182,6 @@ else:
     st.sidebar.success(f"Ingelogd als: {st.session_state['username']}")
 
     
-    st.set_page_config(page_title="Jureren Betekoppen")
     
     st.title("Jury carnavalsoptocht Sas van Gent")
     
@@ -324,4 +323,5 @@ else:
         
 
         
+
 
