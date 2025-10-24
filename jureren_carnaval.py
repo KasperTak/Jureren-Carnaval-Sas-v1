@@ -87,9 +87,13 @@ def beoordeling_categorie_jurylid(categorie, jurylid):
     @st.cache_data(ttl=60)
     def load_existing_data():
         records = sheet.get_all_records()
-        return pd.DataFrame(records)
+        df = pd.DataFrame(records)
+        df.columns = [c.strip() for c in df.columns]
+        return df
     df_existing = load_existing_data()
-    st.write(df_existing.columns.tolist())
+    st.write("Kolommen in df_existing:", df_existing.columns.tolist())
+    st.write("Eerste paar rijen:", df_existing.head())
+    
     # Filter programma op categorie
     df_tab = programma_df[programma_df['categorie'].str.contains(categorie, case=False, na=False)]
 
@@ -323,6 +327,7 @@ else:
         
 
         
+
 
 
 
