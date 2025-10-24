@@ -1,4 +1,4 @@
-altair
+altair>=5.0.0
 argon2-cffi
 argon2-cffi-bindings
 asttokens
@@ -103,4 +103,5 @@ streamlit-aggrid
 streamlit-player
 xlsxwriter
 tabulate
+
 
