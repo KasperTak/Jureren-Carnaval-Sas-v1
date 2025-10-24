@@ -86,7 +86,7 @@ def beoordeling_categorie_jurylid(categorie, jurylid):
     # Bestaande beoordelingen ophalen 
     @st.cache_data(ttl=60)
     def load_existing_data():
-        records = sheet.gett_all_records()
+        records = sheet.get_all_records()
         return pd.DataFrame(records)
     df_existing = load_existing_data()
     
@@ -323,6 +323,7 @@ else:
         
 
         
+
 
 
 
