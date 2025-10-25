@@ -90,7 +90,7 @@ def beoordeling_categorie_jurylid(categorie, jurylid):
         df = pd.DataFrame(records)
         df.columns = [c.strip() for c in df.columns]
         return df
-    # df_existing = load_existing_data()
+    df_existing = load_existing_data()
     # print(f"df_existing.columns")
     # st.write("Kolommen in df_existing:", df_existing.columns.tolist())
     # st.write("Eerste paar rijen:", df_existing.head())
@@ -351,6 +351,7 @@ else:
         
 
         
+
 
 
 
