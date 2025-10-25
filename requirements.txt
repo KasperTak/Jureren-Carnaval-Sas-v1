@@ -82,7 +82,7 @@ six
 smmap
 soupsieve
 stack-data
-streamlit>=1.18.1,<2.0
+streamlit>=1.30
 terminado
 tinycss2
 toml
@@ -103,6 +103,7 @@ streamlit-aggrid
 streamlit-player
 xlsxwriter
 tabulate
+
 
 
 
