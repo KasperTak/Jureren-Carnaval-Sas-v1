@@ -25,7 +25,7 @@ if "username" not in st.session_state:
 #%% GOOGLES SHEETS SETUP
 
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds_dict = st.secrets["google"]
+creds_dict = st.secrets["gcp_service_account"]
 creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
 client = gspread.authorize(creds)
 
@@ -91,6 +91,7 @@ def beoordeling_categorie_jurylid(categorie, jurylid):
         df.columns = [c.strip() for c in df.columns]
         return df
     df_existing = load_existing_data()
+    print(f"df_existing.columns")
     st.write("Kolommen in df_existing:", df_existing.columns.tolist())
     st.write("Eerste paar rijen:", df_existing.head())
     
@@ -327,6 +328,7 @@ else:
         
 
         
+
 
 
 
