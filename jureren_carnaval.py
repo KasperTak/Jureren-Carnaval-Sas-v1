@@ -204,8 +204,9 @@ else:
     if df_test.empty:
         st.warning("⚠️ Geen data opgehaald — controleer of het tabblad 'Beoordeling' data bevat en gedeeld is met de juiste service-account.")
     else:
-        for col in df_test.columns:
-            st.write(f"Kolomnaam: '{col}' (lengte: {len(col)})")
+        st.write(f"Dataset bevat de kolommen:\n{df_test.columns}")
+        # for col in df_test.columns:
+        #     st.write(f"Kolomnaam: '{col}' (lengte: {len(col)})")
         # st.dataframe(df_test.head())
 
 # -------------------------DEBUG EINDE---------------------------------
@@ -350,6 +351,7 @@ else:
         
 
         
+
 
 
 
