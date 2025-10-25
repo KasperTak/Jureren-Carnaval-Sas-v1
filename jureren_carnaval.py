@@ -206,7 +206,7 @@ else:
     else:
         for col in df_test.columns:
             st.write(f"Kolomnaam: '{col}' (lengte: {len(col)})")
-        st.dataframe(df_test.head())
+        # st.dataframe(df_test.head())
 
 # -------------------------DEBUG EINDE---------------------------------
     
@@ -350,6 +350,7 @@ else:
         
 
         
+
 
 
 
