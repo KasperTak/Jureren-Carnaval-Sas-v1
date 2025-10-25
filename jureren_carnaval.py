@@ -186,7 +186,29 @@ else:
     jurylid = st.session_state["username"]
     st.sidebar.success(f"Ingelogd als: {st.session_state['username']}")
 
+    # 🔍---------------------------- DEBUG: check of Google Sheet goed wordt ingelezen
+    @st.cache_data(ttl=60)
+    def test_google_data():
+        try:
+            records = sheet.get_all_records()
+            df = pd.DataFrame(records)
+            df.columns = [c.strip() for c in df.columns]
+            return df
+        except Exception as e:
+            st.error(f"❌ Fout bij ophalen Google Sheet: {e}")
+            return pd.DataFrame()
     
+    df_test = test_google_data()
+    
+    st.subheader("🔍 DEBUG: Kolommen gevonden in Google Sheet")
+    if df_test.empty:
+        st.warning("⚠️ Geen data opgehaald — controleer of het tabblad 'Beoordeling' data bevat en gedeeld is met de juiste service-account.")
+    else:
+        for col in df_test.columns:
+            st.write(f"Kolomnaam: '{col}' (lengte: {len(col)})")
+        st.dataframe(df_test.head())
+
+# -------------------------DEBUG EINDE---------------------------------
     
     st.title("Jury carnavalsoptocht Sas van Gent")
     
@@ -328,6 +350,7 @@ else:
         
 
         
+
 
 
 
