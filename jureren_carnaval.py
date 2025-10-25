@@ -67,7 +67,7 @@ def login():
             st.session_state["logged_in"] = True
             st.session_state['username'] = username
             st.success(f"Welkom {username}!")
-            st.experimental_rerun()
+            st.rerun()
         else:
             st.error("Ongeldig gebruikersnaam of wachtwoord")
             st.write('*Bij hulp: app admin via 06 29927267*')
@@ -269,7 +269,7 @@ else:
                     st.session_state.soort_jury = soort_jury
                     st.session_state.jurylid_nummer = jurylid_nummer
                     st.success(f"Ingelogd als {jurylid_nummer} voor {soort_jury}.")
-                    st.experimental_rerun()
+                    st.rerun()
                     
        # img = Image.open(r"C:\Users\Gebruiker\OneDrive\Privé\Programmeren\Carnaval Sas Van Gent\betekoppen_logo.png") 
         #st.image(img, use_container_width=True)
@@ -350,6 +350,7 @@ else:
         
 
         
+
 
 
 
